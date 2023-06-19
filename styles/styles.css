@@ -1,5 +1,10 @@
 @import url(  "https://fonts.googleapis.com/css?family=Great+Vibes");
 
+body{
+    width: 1440px;
+    padding: 0;
+    margin: 0;
+}
 .icon{
     width: 20px;
     cursor: pointer;
@@ -7,23 +12,26 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-width: 100vw;
-background: #e742c1;
-margin: 0;
-margin-top: -10px;
-position: fixed;
+    background: #e742c1;
+    margin: 0;
+    margin-top: -10px;
+    position: fixed;
+    z-index: 999;
+    /* padding: 10px; */
+    align-items: center;
+    align-content: center;
+    width: 100%;
 }
 .cart-user{
     padding: 10px;
-    margin-left: -20px;
-    margin-top: -10px;
+    margin-left: -100px;
     display: flex;
     justify-content: space-between;
 }
 
-.logo{
+/* .logo{
     margin-top: -15px;
-}
+} */
 
 .cart-user  img{
     padding: 20px;
@@ -45,7 +53,7 @@ display: flex;
     text-align: center;
 }
 
-.cartdialog{
+/*.cartdialog{
     display: flex;
     position: absolute;
     justify-content: center;
@@ -54,8 +62,8 @@ display: flex;
     width: 100px;
     flex-wrap: wrap;
     display: none;
-}
-
+}*/
+/*
 .cartdialog.active {
     display: block;
 }
@@ -66,18 +74,22 @@ display: flex;
 color: white;
 border: none;
 
-}
+}*/
 
 .burger{
     width: 30px;
     margin-top: 10px;
+    margin-left: 20px;
 }
 .first-container{
     display: flex;
-    width: 100vw;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    /* width: 100vw; */
     padding-left: 50px;
     background-attachment: fixed;
-    background-image: url(images/first-back.jpg);
+    background-image: url(../images/first-back.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -85,11 +97,13 @@ border: none;
 
 .beauty-kit{
     width: 50%;
+    
 }
 
 .beauty-kit h1{
 font-size: 100px;
 font-family:"Great Vibes";
+margin-top: 90px;
 /* margin-left: 30px; */
 
 }
@@ -114,6 +128,7 @@ width: 100px;
     align-self: center;
     align-content: center;
     justify-content: center;
+    
 }
 
 .second-container-title{
@@ -128,22 +143,29 @@ text-align: center;
 
 .products{
     display: flex;
-justify-content: space-evenly;
-flex-wrap: wrap;
-width: 80vw;
+justify-content: space-around;
+flex-wrap: wrap; 
+align-items: center;
+align-content: center;
+width: 75vw;
 margin-left: 10vw;
 }
 
 .product{
 position: relative;
     width: 15vw;
-    box-shadow:1px  1px 30px #3c3737  ; 
+    box-shadow:0px  0px  10px #3c3737  ; 
     align-items: center;
     align-content: center;
     justify-content: center;
     text-align: center;
     justify-content: flex-end;
     margin-top: 50px;
+    padding: 30px;
+    min-height: 380px;
+    max-height: 400px;
+    max-width: 180px;
+    transition: 0.8s;
 }
 
 
@@ -158,13 +180,16 @@ position: relative;
     bottom: 0;
     position: absolute;
     background: black;
-    justify-content: space-between;
-width: 100%;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: -30px;
+    align-items: center;
+    align-content: center;
 }
 
 .purchase button{
     border-radius: 30px;
-    height: 50px;
+    height: 30px;
 }
 
 .add-cart{
@@ -174,6 +199,4 @@ width: 100%;
 .purchase p{
     color: white;
 }
-.icart{
-    position: relative;
-}
+
