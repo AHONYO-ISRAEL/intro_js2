@@ -109,3 +109,5 @@ document.querySelector(".totalprice").innerHTML= (CartPrice() === undefined) ?  
 generateCartProducts();
 }
 localStorage.setItem('cart_data', JSON.stringify(cart_products));
+var cartIndex = document.querySelector(".cart-index");
+cartIndex.innerHTML = cart_products.length;

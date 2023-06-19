@@ -29,9 +29,7 @@ body{
     justify-content: space-between;
 }
 
-/* .logo{
-    margin-top: -15px;
-} */
+
 
 .cart-user  img{
     padding: 20px;
@@ -53,28 +51,7 @@ display: flex;
     text-align: center;
 }
 
-/*.cartdialog{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    width: 100px;
-    flex-wrap: wrap;
-    display: none;
-}*/
-/*
-.cartdialog.active {
-    display: block;
-}
 
-.cartdialog   button{
-    background: #e742c1;
-    width: 100%;
-color: white;
-border: none;
-
-}*/
 
 .burger{
     width: 30px;
