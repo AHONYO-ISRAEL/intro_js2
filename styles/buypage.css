@@ -1,10 +1,11 @@
 @import url(  "https://fonts.googleapis.com/css?family=Great+Vibes");
 body{
     overflow-x: hidden;
+
 }
 .buyproduct{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 80%;
     align-items: center;
     align-content: center;
@@ -14,21 +15,8 @@ body{
     margin-left: 9%;
 }
 
-.product{
 
-    box-shadow: 0px  2px 20px gray;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 30px;
-    transition: 0.8s;
-    margin-top: 20vh;
-}
 
-.product img{
-    width: 60%;
-}
 
 .cart{
     width: 80%;
@@ -42,6 +30,7 @@ display: flex;
 position: fixed;
 background: white;
 margin-bottom: 40px;
+z-index: 99;
 }
 
 .cart button{
@@ -58,10 +47,19 @@ margin-bottom: 40px;
     background: #e640bf;
 }
 
+.cart-index1{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #7fffd4b2;
+    position: absolute;
+
+    text-align: center;
+}
+
 .noproduct{
     font-size: 45px;
 text-align: center;
-margin-left: 35%;
 margin-top: 20%;
 }
 
@@ -73,10 +71,77 @@ margin-top: 20%;
     color: white;
 }
 
+.product{
+         padding: 30px;
+        box-shadow: 0px  2px 20px gray;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+        transition: 0.8s;
+        margin-top: 20vh;
+        position: relative;
+        min-width: 60%;
+    }
+
+.product-head{
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+margin-bottom: 70px;
+/* box-shadow: 0px  2px 20px gray; */
+top: 0;
+left: 0;
+position: absolute;
+}
+
+.product-body{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+    align-content: center;
+}
+
+.product-body img{
+    width: 40%;
+}
+
+.quantity{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.qty{
+    margin: 20px 20px 10px 20px;
+    
+}
+.quantity button{
+    box-shadow: 0px  2px 10px gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 30px;
+font-weight: bold;
+text-align: center;
+align-items: center;
+align-content: center;
+justify-content: center;
+transition: 1s;
+}
 
 
+.quantity button:hover{
+    box-shadow:  inset 0px  2px 10px gray;
+    transition: 0.5s;
 
-
+}
 
 
 
@@ -134,3 +199,119 @@ display: flex;
     margin-top: 10px;
     margin-left: 20px;
 }
+
+
+
+
+
+
+/*-----------------------------NAV-------------*/
+nav{
+    /* display: none; */
+     padding: 30px;
+     position: fixed;
+     width: 60vw;
+     min-height: 50vh;
+     height: 100vh ;
+     flex-direction: column;
+     /* background: linear-gradient(255,255,0.5); */
+     backdrop-filter: blur(10px);
+     padding: 20px 40px;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     border-bottom: 1px solid rgb(207, 207, 207);
+     transition: transform 1s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+     transform: translateX(-200vh);
+     z-index: -1;
+     text-align: center;
+ }
+ nav.active{
+     transform: translateX(0);
+ }
+ 
+ .iconsmedia{
+     display: block;
+ }
+ 
+ .burger.active img{
+ src: url("assets/fontawesome-free-6.4.0-web/svgs/solid/cross.svg");
+ }
+ .burger{
+     transition: 0.5s;
+     width: 30px;
+     margin-left: 20px;
+     top: 0;
+     left: 0;
+     margin-top: 30px;
+     position: absolute;
+     transform: translateY(-90px);
+ }
+ 
+
+ /*----------------------------------------------------------------Responsive styles    -  ----------------------------------------------------------------*/
+
+ @media screen and (max-width:992px) {
+    .product{
+        width: 80%;
+
+    }
+}
+
+
+ @media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .icons{
+        display: none;
+    }
+    
+    .logo{
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    
+    .navbar{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+
+    }
+    nav {
+        display: flex;
+        z-index: 3;
+    }
+    
+    .burger{
+        transform: translateY(0);
+    }
+    
+    nav img{
+        width: 40px;
+    }
+
+    .cart{
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        justify-content: space-around;
+    }
+
+    .product{
+        width: 90%;
+        
+    }
+
+    .buyproduct{
+        width: 100%;
+        margin-left: -30px;
+    }
+
+    
+ }

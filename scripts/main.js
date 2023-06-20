@@ -91,6 +91,8 @@ let generateProducts = () => {
 generateProducts()
 
 var cartIndex = document.querySelector(".cart-index");
+var cartIndex1 = document.querySelector(".cart-index1");
+
 let cart =JSON.parse(localStorage.getItem("cart_data"))  ||   []  ;
 
 add = (id) => {
@@ -109,20 +111,24 @@ let addcart = document.getElementById(newid);
       quantity: 1
     });
   cartIndex.innerHTML = cart.length;
+  cartIndex1.innerHTML = cart.length;
+
 
   }
   localStorage.setItem("cart_data", JSON.stringify(cart));
 
   addcart.innerHTML="Product Added";
-  this.innerHTML = "Product Added";
 }
 cartIndex.innerHTML = cart.length;
+cartIndex1.innerHTML = cart.length;
 
 
 reset = () =>{
   cart = [];
   localStorage.setItem("cart_data", JSON.stringify(cart));
   cartIndex.innerHTML= cart.length;
+  cartIndex1.innerHTML = cart.length;
+
 }
 const cartdialog = document.querySelector(".cartdialog");
 showdialog = () =>{
@@ -133,3 +139,11 @@ showdialog = () =>{
   cartdialog.classList.contains("active")? cartdialog.classList.remove("active"): cartdialog.classList.add("active");
 }
 
+
+const burger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+
+release = () =>{
+          burger.classList.contains("active")?burger.classList.remove("active"):burger.classList.add("active");
+          nav.classList.contains("active")?nav.classList.remove("active"):nav.classList.toggle("active");
+}
