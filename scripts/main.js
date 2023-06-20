@@ -3,7 +3,7 @@ var product_list = [
     id: 1,
     title: "Beauty Brush",
     description: "Lorem ipsum shits and stuff",
-    image: "images/im8.png",
+    image: "assets/images/im8.png",
     price: 7.5,
     tocart: false
   },
@@ -11,7 +11,7 @@ var product_list = [
     id: 2,
     title: "Random Product 1",
     description: "Lorem ipsum dolor sit amet",
-    image: "images/im7.png",
+    image: "assets/images/im7.png",
     price: 9.99,
     tocart: false
   },
@@ -19,7 +19,7 @@ var product_list = [
     id: 3,
     title: "Random Product 2",
     description: "Consectetur adipiscing elit",
-    image: "images/im6.png",
+    image: "assets/images/im6.png",
     price: 12.5,
     tocart: false
   },
@@ -27,7 +27,7 @@ var product_list = [
     id: 4,
     title: "Random Product 3",
     description: "Sed do eiusmod tempor incididunt",
-    image: "images/im5.png",
+    image: "assets/images/im5.png",
     price: 6.99,
     tocart: false
   },
@@ -35,7 +35,7 @@ var product_list = [
     id: 5,
     title: "Random Product 4",
     description: "Ut labore et dolore magna aliqua",
-    image: "images/im4.png",
+    image: "assets/images/im4.png",
     price: 15.99,
     tocart: false
   },
@@ -43,7 +43,7 @@ var product_list = [
     id: 6,
     title: "Random Product 5",
     description: "Ut enim ad minim veniam",
-    image: "images/im3.png",
+    image: "assets/images/im3.png",
     price: 10.99,
     tocart: false
   },
@@ -51,7 +51,7 @@ var product_list = [
     id: 7,
     title: "Random Product 6",
     description: "Quis nostrud exercitation ullamco",
-    image: "images/im2.png",
+    image: "assets/images/im2.png",
     price: 8.75,
     tocart: false
   },
@@ -59,7 +59,7 @@ var product_list = [
     id: 8,
     title: "Random Product 7",
     description: "Duis aute irure dolor in reprehenderit",
-    image: "images/im1.png",
+    image: "assets/images/im1.png",
     price:14.5,
     tocart: false
   },
@@ -94,6 +94,7 @@ var cartIndex = document.querySelector(".cart-index");
 let cart =JSON.parse(localStorage.getItem("cart_data"))  ||   []  ;
 
 add = (id) => {
+  var link = "../"
 let newid= id.toString()+id.toString();
 let addcart = document.getElementById(newid);
   let searchProduct = product_list.find((product) => product.id === id);
@@ -101,7 +102,7 @@ let addcart = document.getElementById(newid);
   if (search === undefined) {
     cart.push({
       id: searchProduct.id,
-      image : searchProduct.image,
+      image :  link + searchProduct.image, 
       description : searchProduct.description,
       title : searchProduct.title,
       price: searchProduct.price,

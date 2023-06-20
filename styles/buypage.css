@@ -1,5 +1,7 @@
 @import url(  "https://fonts.googleapis.com/css?family=Great+Vibes");
-
+body{
+    overflow-x: hidden;
+}
 .buyproduct{
     display: flex;
     justify-content: space-between;
